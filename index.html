@@ -252,7 +252,111 @@ body::before {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
+/* ========== БЛОК: ТАРИФЫ ========== */
+.pricing {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
 
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: left;
+    transition: all var(--transition);
+    position: relative;
+}
+
+.pricing-card:hover {
+    border-color: #555;
+    transform: translateY(-4px);
+}
+
+.pricing-card.featured {
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+.pricing-card.featured::before {
+    content: 'Популярный';
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #0A0A0A;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+.pricing-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.pricing-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.pricing-price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.pricing-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.pricing-list {
+    list-style: none;
+    margin: 24px 0;
+    padding: 0;
+}
+
+.pricing-list li {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.pricing-list li::before {
+    content: '✓ ';
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.pricing-note {
+    margin-top: 28px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
         /* ========== БЛОК 4: ПРОЕКТЫ ========== */
         .projects {
             padding: 80px 0;
@@ -506,7 +610,65 @@ body::before {
                 </div>
             </div>
         </section>
+        <section class="pricing" id="pricing">
+    <div class="container">
+        <h2>Тарифы</h2>
+        <p class="section-subtitle" style="margin: 0 auto 12px;">Честные цены на визуальные системы для бизнеса.</p>
 
+        <div class="pricing-grid">
+            
+            <!-- Тариф 1: Базовый -->
+            <div class="pricing-card">
+                <div class="pricing-name">Базовый</div>
+                <div class="pricing-desc">Для старта: лендинг или логотип по отдельности.</div>
+                <div class="pricing-price">от 25 000 <span>₽</span></div>
+                <ul class="pricing-list">
+                    <li>Логотип или лендинг на выбор</li>
+                    <li>До 3 смысловых блоков</li>
+                    <li>Адаптив под мобильные</li>
+                    <li>Срок: от 5 дней</li>
+                    <li>2 раунда правок</li>
+                </ul>
+                <a href="https://t.me/advadda?text=Хочу%20базовый%20тариф" target="_blank" class="btn btn-outline">Выбрать</a>
+            </div>
+
+            <!-- Тариф 2: Оптимальный (популярный) -->
+            <div class="pricing-card featured">
+                <div class="pricing-name">Оптимальный</div>
+                <div class="pricing-desc">Айдентика + лендинг. Единая система под ключ.</div>
+                <div class="pricing-price">от 60 000 <span>₽</span></div>
+                <ul class="pricing-list">
+                    <li>Логотип + визуальный язык</li>
+                    <li>Лендинг до 5 блоков</li>
+                    <li>Гайдлайн по стилю</li>
+                    <li>Адаптив + базовая анимация</li>
+                    <li>Срок: от 10 дней</li>
+                    <li>3 раунда правок</li>
+                </ul>
+                <a href="https://t.me/advadda?text=Хочу%20оптимальный%20тариф" target="_blank" class="btn btn-primary">Выбрать</a>
+            </div>
+
+            <!-- Тариф 3: Премиум -->
+            <div class="pricing-card">
+                <div class="pricing-name">Премиум</div>
+                <div class="pricing-desc">Полная визуальная система с анимацией и глубиной.</div>
+                <div class="pricing-price">от 120 000 <span>₽</span></div>
+                <ul class="pricing-list">
+                    <li>Всё из «Оптимального»</li>
+                    <li>Многостраничный сайт</li>
+                    <li>Сложная анимация интерфейсов</li>
+                    <li>Анализ конкурентов и ЦА</li>
+                    <li>Срок: от 14 дней</li>
+                    <li>Неограниченные правки</li>
+                </ul>
+                <a href="https://t.me/advadda?text=Хочу%20премиум%20тариф" target="_blank" class="btn btn-outline">Выбрать</a>
+            </div>
+
+        </div>
+
+        <p class="pricing-note">Нужен особый формат? <a href="https://t.me/advadda" target="_blank" style="color: var(--accent);">Напишите мне</a> — соберу индивидуальный расчёт.</p>
+    </div>
+</section>
         <!-- БЛОК 4: ПРОЕКТЫ -->
         <section class="projects" id="projects">
             <div class="container">
