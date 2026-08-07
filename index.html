@@ -198,7 +198,7 @@ body::before {
             color: var(--accent);
         }
 /* ========== БЛОК 1: ПЕРВЫЙ ЭКРАН ========== */
-      hero {
+.hero {
     padding: 100px 0 80px;
     text-align: center;
     position: relative;
@@ -244,6 +244,13 @@ body::before {
     }
 }
 
+/* Поднимаем текст над формой */
+.hero h1,
+.hero .hero-subtitle,
+.hero .hero-buttons {
+    position: relative;
+    z-index: 1;
+}
 
         /* ========== БЛОК 2: УСЛУГИ ========== */
         .services {
