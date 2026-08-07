@@ -198,58 +198,32 @@ body::before {
             color: var(--accent);
         }
 /* ========== БЛОК 1: ПЕРВЫЙ ЭКРАН ========== */
+/* ========== БЛОК 1: ПЕРВЫЙ ЭКРАН ========== */
 .hero {
     padding: 100px 0 80px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Анимированная абстрактная форма */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.12;
-    border-radius: 60% 40% 50% 50% / 50% 40% 50% 50%;
-    transform: translate(-50%, -50%);
-    animation: heroMorph 12s ease-in-out infinite alternate;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(40px);
+.hero h1 {
+    margin-bottom: 16px;
 }
 
-@keyframes heroMorph {
-    0% {
-        border-radius: 60% 40% 50% 50% / 50% 40% 50% 50%;
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-    }
-    25% {
-        border-radius: 40% 60% 55% 45% / 60% 45% 55% 40%;
-    }
-    50% {
-        border-radius: 55% 45% 40% 60% / 45% 55% 50% 50%;
-        transform: translate(-50%, -50%) rotate(15deg) scale(1.15);
-    }
-    75% {
-        border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
-    }
-    100% {
-        border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
-        transform: translate(-50%, -50%) rotate(-10deg) scale(1.05);
-    }
+.hero .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 550px;
+    margin: 0 auto 36px;
 }
 
-/* Поднимаем текст над формой */
-.hero h1,
-.hero .hero-subtitle,
-.hero .hero-buttons {
-    position: relative;
-    z-index: 1;
+.hero .btn {
+    margin: 0 8px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
         /* ========== БЛОК 2: УСЛУГИ ========== */
